@@ -20,6 +20,19 @@ namespace labInvSys
 {
     public partial class Form1 : Form
     {
+        /*
+         *  Proyek Manajemen Stok Barang Lab. Terpadu Poltekkes Kemenkes Surabaya
+         *  Start : 18 Mei 2015 12:52
+         *  Real Start : 18 Juni 2015 12:53
+         *  Om Awignamastu Namah Siddham,
+         *  
+         *  Aplikasi Menejemen Stok Barang Lab. Terpadu Poltekkes Surabaya versi 0.1.1
+         *  1. Digunakan untuk memantau, menginventaris barang habis pakai milik lab terpadu;
+         *  2. Client mengolah data stok dengan menggunakan MS. Excel;
+         *  3. Master membaca data dari client yg berupa file *.xlsx kemudian memprosesnya sebagai sebuah laporan.
+         *  
+         */
+
         public Form1()
         {
             InitializeComponent();
