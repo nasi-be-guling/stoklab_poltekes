@@ -60,9 +60,14 @@ namespace labInvSys
             }
         }
 
+        private void selectData()
+        {
+            
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            var connection = new SQLiteConnection(@"Data Source=D:\Data\Download\sqlite\test.db");
+            var connection = new SQLiteConnection(@"Data Source=D:\new\sqlite\test.db");
 //            var context = new DataContext(connection);
 //
 //            var companies = context.GetTable<Company>();
@@ -72,7 +77,8 @@ namespace labInvSys
 //                    company.Id, company.Seats);
 //            }
             connection.Open();
-            SQLiteCommand liteCommand = new SQLiteCommand("select * from barang", connection);
+            SQLiteTransaction trans = connection.BeginTransaction();
+            SQLiteCommand liteCommand = new SQLiteCommand("select * from barang", connection, trans);
             SQLiteDataReader reader = liteCommand.ExecuteReader();
 
             if (reader.HasRows)
